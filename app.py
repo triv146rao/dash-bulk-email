@@ -12,6 +12,8 @@ from flask import Flask
 import dash
 
 # Initialize the app
+server = Flask(__name__)  # Expose this for Vercel
+app = dash.Dash(__name__, server=server)
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 app.layout = dbc.Container([
@@ -153,5 +155,3 @@ def send_emails(n_clicks, subject, message):
 if __name__ == '__main__':
     app.run(debug=True)
 
-server = Flask(__name__)  # Expose this for Vercel
-app = dash.Dash(__name__, server=server)
