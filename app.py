@@ -155,8 +155,9 @@ def send_emails(n_clicks, subject, message):
 #if __name__ == '__main__':
 #    app.run(debug=True)
 
-server = app.server
+# server = app.server
+#if __name__ == "__main__":
+#   app.run_server(debug=False, host="0.0.0.0", port=8000)
 if __name__ == "__main__":
-    app.run_server(debug=False, host="0.0.0.0", port=8000)
-
+    app.run_server(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
 
