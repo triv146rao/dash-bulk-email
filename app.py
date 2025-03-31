@@ -8,6 +8,8 @@ import smtplib
 from email.message import EmailMessage
 import io
 import time
+from flask import Flask
+import dash
 
 # Initialize the app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -150,3 +152,6 @@ def send_emails(n_clicks, subject, message):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+server = Flask(__name__)  # Expose this for Vercel
+app = dash.Dash(__name__, server=server)
