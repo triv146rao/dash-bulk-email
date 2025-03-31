@@ -1,8 +1,4 @@
 dash
-dash-bootstrap-components
-pandas
-openpyxl
-email
 gunicorn
 flask
 
