@@ -1,4 +1,6 @@
 dash
-gunicorn
+dash-bootstrap-components
 flask
-
+pandas
+openpyxl
+gunicorn
