@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "email-bulk-sub.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "email-bulk-sub.py"
+    }
+  ]
+}
